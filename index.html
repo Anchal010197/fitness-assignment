@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="slode.css">
+    <title>Hello Fitness</title>
+</head>
+
+<body>
+    <!-- header section -->
+    <div id="wrapper">
+            <div class="row">
+                <div class="logo">
+                    <img src="https://as2.ftcdn.net/v2/jpg/03/39/11/55/1000_F_339115538_93qAYyqyHLXtnjLoPc8nPdZuVr0fAqoA.jpg"
+                        alt="">
+                </div>
+                <nav id="main-navigation">
+                    <div class="sub-navigation">
+                        <img src="https://img.myloview.com/stickers/video-camera-icon-cinema-camera-icon-film-camera-movie-camera-icon-vector-icon-eps-700-222197820.jpg"
+                            alt="">
+                        <h4>LIVE</h4>
+                    </div>
+                    <div class="sub-navigation">
+                        <img src="https://cdn-icons-png.flaticon.com/512/60/60378.png" alt="">
+                        <h4>MEMBERSHIP</h4>
+                    </div>
+                    <div class="sub-navigation">
+                        <img src="https://img.freepik.com/free-icon/running-man_318-1564.jpg?w=740&t=st=1648804206~exp=1648804806~hmac=d16bec2c3132d3d418c8d341edb3847e92ce892e78b3a44be773f6cb8ae3a7b8"
+                            alt="">
+                        <h4>PLAN</h4>
+                    </div>
+                    <div class="sub-navigation">
+                        <img src="https://www.svgrepo.com/show/100528/four-squares-button-of-view-options.svg" alt="">
+                        <h4>MORE</h4>
+                    </div>
+                </nav>
+                <div class="btn">
+
+                    <img class-user-icon src="https://media.istockphoto.com/vectors/simple-man-head-icon-set-vector-id1196083861?s=612x612"
+                        alt="">
+                    <h4>Login</h4>
+                </div>
+    </div>
+    <!-- end of header -->
+    <div class="workout-conatiner">
+        <div class="flex-container">
+            <div class="flex-slide strenght">
+                <div class="flex-title">STRENGHT</div>
+            </div>
+            <div class="flex-slide  mobility">
+                <div class="flex-title">MOBILITY</div>
+            </div>
+            <div class="flex-slide drills">
+                <div class="flex-title">DRILLS</div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/jquery.waitforimages.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script>
+        (function () {
+            $('.flex-container').waitForImages(function () {
+                $('.spinner').fadeOut();
+            }, $.noop, true);
+
+            $(".flex-slide").each(function () {
+                $(this).hover(function () {
+                    $(this).find('.flex-title').css({
+                        transform: 'rotate(0deg)',
+                        top: '10%'
+                    });
+                    $(this).find('.flex-about').css({
+                        opacity: '1'
+                    });
+                }, function () {
+                    $(this).find('.flex-title').css({
+                        transform: 'rotate(90deg)',
+                        top: '15%'
+                    });
+                    $(this).find('.fle  x-about').css({
+                        opacity: '0'
+                    });
+                })
+            });
+        })();
+    </script>
+    </div>
+    </body>
+
+</html>
